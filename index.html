@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Đậu Quốc Duy</title>
-    <link rel="stylesheet" type="text/css" href="style.css?v=5.0">
+    <link rel="stylesheet" type="text/css" href="style.css?v=6.0">
     <style>
       body {
           margin: 0;
@@ -116,13 +116,28 @@
           margin: 30px auto;
           max-width: 970px;
       }
+      .sec-head {
+          font-size: 19px;
+          font-weight: 600;
+          color: #111;
+          margin: 35px 0 22px 0;
+          padding-bottom: 6px;
+          border-bottom: 1px solid #eee;
+          letter-spacing: -0.2px;
+      }
       #history {
-          margin-top: 20px;
+          margin-top: 15px;
           margin-bottom: 80px;
       }
+      .timeline-block {
+          margin-bottom: 40px;
+      }
       .entry {
-          margin-bottom: 36px;
+          margin-bottom: 34px;
           align-items: flex-start;
+      }
+      .entry:last-child {
+          margin-bottom: 10px;
       }
       .timespan {
           grid-column: span 2;
@@ -142,18 +157,39 @@
           align-items: flex-start;
           padding-top: 4px;
       }
+      .ico::before {
+          content: "";
+          position: absolute;
+          top: 14px;
+          bottom: -38px;
+          left: 50%;
+          width: 2px;
+          background-color: #e5e7eb;
+          transform: translateX(-50%);
+          z-index: 1;
+      }
+      .entry:last-child .ico::before {
+          display: none;
+      }
       .entry-dot {
-          width: 6px;
-          height: 6px;
-          background-color: #bbb;
+          width: 8px;
+          height: 8px;
+          background-color: #9ca3af;
           border-radius: 50%;
           margin-top: 6px;
+          position: relative;
+          z-index: 2;
+          box-shadow: 0 0 0 4px #ffffff;
       }
       .ico img {
-          width: 46px;
-          height: 46px;
+          position: relative;
+          z-index: 2;
+          width: 44px;
+          height: 44px;
           border-radius: 6px;
           object-fit: contain;
+          background-color: #ffffff;
+          box-shadow: 0 0 0 4px #ffffff;
       }
       .desc {
           grid-column: span 9;
@@ -211,6 +247,9 @@
               grid-column: span 2;
               justify-content: flex-start;
           }
+          .ico::before {
+              left: 8px;
+          }
           .desc {
               grid-column: span 10;
               padding-left: 0;
@@ -246,134 +285,147 @@
 
     <hr>
 
-    <!-- History / Timeline Section -->
+    <!-- Main Content Container -->
     <div id="history" class="container">
 
-      <!-- Education (HUST) at the top of timeline -->
-      <div class="entry row">
-        <div class="timespan">
-          2022 - 2026
-        </div>
-        <div class="ico">
-          <img src="assets/hust.webp" alt="HUST Logo" />
-        </div>
-        <div class="desc">
-          I am pursuing my Bachelor of Science in Computer Science at <a href="https://hust.edu.vn/">Hanoi University of Science and Technology (HUST / ĐH Bách Khoa Hà Nội)</a>.
-        </div>
-      </div>
+      <!-- EDUCATION SECTION -->
+      <div class="timeline-block">
+        <div class="sec-head">Education & Programs</div>
 
-      <!-- AI in Action - VinUniversity -->
-      <div class="entry row">
-        <div class="timespan">
-          7/2026 - Present
+        <!-- HUST -->
+        <div class="entry row">
+          <div class="timespan">
+            2022 - 2026
+          </div>
+          <div class="ico">
+            <img src="assets/hust.webp" alt="HUST Logo" />
+          </div>
+          <div class="desc">
+            I am pursuing my Bachelor of Science in Computer Science at <a href="https://hust.edu.vn/">Hanoi University of Science and Technology (HUST / ĐH Bách Khoa Hà Nội)</a>.
+          </div>
         </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-        </div>
-        <div class="desc">
-          I am participating in the <a href="https://vinuni.edu.vn/ai-in-action-building-the-next-generation-of-ai-talents-for-a-changing-world/">AI in Action</a> (Cohort 3) program at <strong>VinUniversity</strong>, focusing on advanced AI systems, LLM agents, and practical AI applications.
-        </div>
-      </div>
 
-      <!-- DNSE -->
-      <div class="entry row">
-        <div class="timespan">
-          4/2025 - 7/2026
-        </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-        </div>
-        <div class="desc">
-          I was a Software Engineer (Part-time) at <a href="https://www.dnse.com.vn/">DNSE Securities JSC</a>.
-          <ul>
-            <li>Built an AI-powered smart stock trading system using <strong>Golang (Gin Framework)</strong> within a microservices architecture integrated via <strong>Kafka</strong>.</li>
-            <li>Designed and implemented real-time stock chatbot features leveraging <strong>Nakama WebSocket</strong> for interactive and scalable communication.</li>
-            <li>Managed CI/CD pipelines with <strong>GitLab Runner</strong> and deployed microservices on <strong>Kubernetes</strong>, ensuring reliable delivery processes.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- WalletCare AI -->
-      <div class="entry row">
-        <div class="timespan">
-          7/2026 - 8/2026
-        </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-        </div>
-        <div class="desc">
-          I built <a href="https://walletcare.c3-app-121.io.vn">WalletCare AI</a> — an AI Agent platform for e-wallet enterprises to automate transaction dispute investigation and customer support, demonstrated with a simulated e-wallet (<a href="https://vpay.c3-app-121.io.vn/app">VPay</a>).
-          <ul>
-            <li>Developed multi-step reasoning agent workflows using <strong>LangGraph</strong> and <strong>FastAPI</strong> with <strong>PostgreSQL</strong> database.</li>
-            <li>Implemented Human-in-the-Loop approval and tool calling for zero-hallucination investigation.</li>
-            <li>Built the web interface using <strong>Next.js</strong> and <strong>Tailwind CSS</strong>; containerized and deployed services using <strong>Docker</strong> on VPS.</li>
-          </ul>
-          <div class="project-preview">
-            <a href="https://walletcare.c3-app-121.io.vn" target="_blank" rel="noopener noreferrer">
-              <img src="assets/walletcare.png" alt="WalletCare AI Interface Preview" class="preview-img" />
-            </a>
+        <!-- AI in Action - VinUniversity -->
+        <div class="entry row">
+          <div class="timespan">
+            7/2026 - Present
+          </div>
+          <div class="ico">
+            <div class="entry-dot"></div>
+          </div>
+          <div class="desc">
+            I am participating in the <a href="https://vinuni.edu.vn/ai-in-action-building-the-next-generation-of-ai-talents-for-a-changing-world/">AI in Action</a> (Cohort 3) program at <strong>VinUniversity</strong>, focusing on advanced AI systems, LLM agents, and practical AI applications.
           </div>
         </div>
       </div>
 
-      <!-- LangLearn AI -->
-      <div class="entry row">
-        <div class="timespan">
-          1/2026 - 5/2026
+      <!-- WORK EXPERIENCE & PROJECTS SECTION -->
+      <div class="timeline-block">
+        <div class="sec-head">Experience & Projects</div>
+
+        <!-- DNSE -->
+        <div class="entry row">
+          <div class="timespan">
+            4/2025 - 7/2026
+          </div>
+          <div class="ico">
+            <div class="entry-dot"></div>
+          </div>
+          <div class="desc">
+            I was a Software Engineer (Part-time) at <a href="https://www.dnse.com.vn/">DNSE Securities JSC</a>.
+            <ul>
+              <li>Built an AI-powered smart stock trading system using <strong>Golang (Gin Framework)</strong> within a microservices architecture integrated via <strong>Kafka</strong>.</li>
+              <li>Designed and implemented real-time stock chatbot features leveraging <strong>Nakama WebSocket</strong> for interactive and scalable communication.</li>
+              <li>Managed CI/CD pipelines with <strong>GitLab Runner</strong> and deployed microservices on <strong>Kubernetes</strong>, ensuring reliable delivery processes.</li>
+            </ul>
+          </div>
         </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
+
+        <!-- WalletCare AI -->
+        <div class="entry row">
+          <div class="timespan">
+            7/2026 - 8/2026
+          </div>
+          <div class="ico">
+            <div class="entry-dot"></div>
+          </div>
+          <div class="desc">
+            I built <a href="https://walletcare.c3-app-121.io.vn">WalletCare AI</a> — an AI Agent platform for e-wallet enterprises to automate transaction dispute investigation and customer support, demonstrated with a simulated e-wallet (<a href="https://vpay.c3-app-121.io.vn/app">VPay</a>).
+            <ul>
+              <li>Developed multi-step reasoning agent workflows using <strong>LangGraph</strong> and <strong>FastAPI</strong> with <strong>PostgreSQL</strong> database.</li>
+              <li>Implemented Human-in-the-Loop approval and tool calling for zero-hallucination investigation.</li>
+              <li>Built the web interface using <strong>Next.js</strong> and <strong>Tailwind CSS</strong>; containerized and deployed services using <strong>Docker</strong> on VPS.</li>
+            </ul>
+            <div class="project-preview">
+              <a href="https://walletcare.c3-app-121.io.vn" target="_blank" rel="noopener noreferrer">
+                <img src="assets/walletcare.png" alt="WalletCare AI Interface Preview" class="preview-img" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="desc">
-          For my graduation capstone project, I developed <a href="https://fatcat-datn.web.app/">LangLearn AI</a> — an intelligent language learning platform with FSRS spaced repetition, AI speaking buddy, and adaptive learning analytics.
-          <ul>
-            <li>Developed RESTful APIs using <strong>Go (Gin)</strong>, <strong>PostgreSQL</strong>, and <strong>Redis</strong>.</li>
-            <li>Implemented FSRS algorithm and LLM integration for AI conversational practice and smart flashcards.</li>
-            <li>Built web interface with <strong>React 19</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>; containerized and deployed using <strong>Docker</strong>.</li>
-          </ul>
-          <div class="project-preview">
-            <a href="https://fatcat-datn.web.app/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/langlearn.png" alt="LangLearn AI App Preview" class="preview-img" />
-            </a>
+
+        <!-- LangLearn AI -->
+        <div class="entry row">
+          <div class="timespan">
+            1/2026 - 5/2026
+          </div>
+          <div class="ico">
+            <div class="entry-dot"></div>
+          </div>
+          <div class="desc">
+            For my graduation capstone project, I developed <a href="https://fatcat-datn.web.app/">LangLearn AI</a> — an intelligent language learning platform with FSRS spaced repetition, AI speaking buddy, and adaptive learning analytics.
+            <ul>
+              <li>Developed RESTful APIs using <strong>Go (Gin)</strong>, <strong>PostgreSQL</strong>, and <strong>Redis</strong>.</li>
+              <li>Implemented FSRS algorithm and LLM integration for AI conversational practice and smart flashcards.</li>
+              <li>Built web interface with <strong>React 19</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>; containerized and deployed using <strong>Docker</strong>.</li>
+            </ul>
+            <div class="project-preview">
+              <a href="https://fatcat-datn.web.app/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/langlearn.png" alt="LangLearn AI App Preview" class="preview-img" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FatCat & Benri -->
+        <div class="entry row">
+          <div class="timespan">
+            9/2024 - 12/2024
+          </div>
+          <div class="ico">
+            <div class="entry-dot"></div>
+          </div>
+          <div class="desc">
+            I developed backend systems for mobile applications:
+            <ul>
+              <li><a href="https://github.com/DUYCUTEPHOMAIQUE/FatCat-FlashCard-App">FatCat</a>: Flashcard vocabulary learning application (Node.js, MySQL, AWS EC2).</li>
+              <li><a href="https://github.com/DUYCUTEPHOMAIQUE/backend-di-cho-tien-loi">Benri</a>: Grocery shopping and food inventory management application (Node.js, MongoDB, AWS EC2).</li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- FatCat & Benri -->
-      <div class="entry row">
-        <div class="timespan">
-          9/2024 - 12/2024
-        </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-        </div>
-        <div class="desc">
-          I developed backend systems for mobile applications:
-          <ul>
-            <li><a href="https://github.com/DUYCUTEPHOMAIQUE/FatCat-FlashCard-App">FatCat</a>: Flashcard vocabulary learning application (Node.js, MySQL, AWS EC2).</li>
-            <li><a href="https://github.com/DUYCUTEPHOMAIQUE/backend-di-cho-tien-loi">Benri</a>: Grocery shopping and food inventory management application (Node.js, MongoDB, AWS EC2).</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Skills -->
-      <div class="entry row">
-        <div class="timespan">
-          Skills
-        </div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-        </div>
-        <div class="desc">
-          A summary of technical tools and technologies I work with:
-          <ul>
-            <li><strong>Back-End:</strong> Golang, Node.js, Java, Microservices Architecture, Apache Kafka, WebSocket, Nakama, RESTful APIs, Redis.</li>
-            <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB.</li>
-            <li><strong>Front-End:</strong> Flutter (MVVM architecture), React 19, Next.js, TypeScript, Tailwind CSS.</li>
-            <li><strong>DevOps / CI-CD:</strong> GitLab CI/CD, GitLab Runner, Docker, Kubernetes, AWS EC2, Git.</li>
-            <li><strong>AI Engineering:</strong> LangGraph, LLM integration, Prompt Engineering, Claude Code, Cursor AI.</li>
-            <li><strong>Languages:</strong> English (VSTEP B1 ~ TOEIC 550), Japanese (JLPT N4).</li>
-          </ul>
+      <!-- SKILLS SECTION -->
+      <div class="timeline-block">
+        <div class="sec-head">Skills & Languages</div>
+        <div class="entry row">
+          <div class="timespan">
+            Tech Stack
+          </div>
+          <div class="ico">
+            <div class="entry-dot"></div>
+          </div>
+          <div class="desc">
+            A summary of technical tools and technologies I work with:
+            <ul>
+              <li><strong>Back-End:</strong> Golang, Node.js, Java, Microservices Architecture, Apache Kafka, WebSocket, Nakama, RESTful APIs, Redis.</li>
+              <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB.</li>
+              <li><strong>Front-End:</strong> Flutter (MVVM architecture), React 19, Next.js, TypeScript, Tailwind CSS.</li>
+              <li><strong>DevOps / CI-CD:</strong> GitLab CI/CD, GitLab Runner, Docker, Kubernetes, AWS EC2, Git.</li>
+              <li><strong>AI Engineering:</strong> LangGraph, LLM integration, Prompt Engineering, Claude Code, Cursor AI.</li>
+              <li><strong>Languages:</strong> English (VSTEP B1 ~ TOEIC 550), Japanese (JLPT N4).</li>
+            </ul>
+          </div>
         </div>
       </div>
 

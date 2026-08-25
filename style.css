@@ -126,15 +126,34 @@ hr {
     max-width: 970px;
 }
 
-/* History */
+/* Section Titles */
+.sec-head {
+    font-size: 19px;
+    font-weight: 600;
+    color: #111;
+    margin: 35px 0 22px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eee;
+    letter-spacing: -0.2px;
+}
+
+/* History / Timeline */
 #history {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 80px;
 }
 
+.timeline-block {
+    margin-bottom: 40px;
+}
+
 .entry {
-    margin-bottom: 36px;
+    margin-bottom: 34px;
     align-items: flex-start;
+}
+
+.entry:last-child {
+    margin-bottom: 10px;
 }
 
 .timespan {
@@ -157,19 +176,43 @@ hr {
     padding-top: 4px;
 }
 
+/* Vertical line connecting timeline nodes */
+.ico::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    bottom: -38px;
+    left: 50%;
+    width: 2px;
+    background-color: #e5e7eb;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.entry:last-child .ico::before {
+    display: none;
+}
+
 .entry-dot {
-    width: 6px;
-    height: 6px;
-    background-color: #bbb;
+    width: 8px;
+    height: 8px;
+    background-color: #9ca3af;
     border-radius: 50%;
     margin-top: 6px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 0 4px #ffffff;
 }
 
 .ico img {
-    width: 46px;
-    height: 46px;
+    position: relative;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
     border-radius: 6px;
     object-fit: contain;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px #ffffff;
 }
 
 .desc {
@@ -237,6 +280,9 @@ hr {
     .ico {
         grid-column: span 2;
         justify-content: flex-start;
+    }
+    .ico::before {
+        left: 8px;
     }
     .desc {
         grid-column: span 10;
