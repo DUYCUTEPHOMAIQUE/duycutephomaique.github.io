@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Đậu Quốc Duy</title>
-    <link rel="stylesheet" type="text/css" href="style.css?v=3.0">
+    <link rel="stylesheet" type="text/css" href="style.css?v=4.0">
     <style>
       body {
           margin: 0;
@@ -85,6 +85,7 @@
           width: 195px;
           height: 195px;
           object-fit: cover;
+          object-position: center top;
           display: inline-block;
       }
       #dico {
@@ -186,6 +187,9 @@
               padding-right: 0;
               padding-top: 0;
           }
+          .entry-dot {
+              display: none;
+          }
           .ico {
               grid-column: span 2;
               justify-content: flex-start;
@@ -224,6 +228,22 @@
 
     <!-- History / Timeline Section -->
     <div id="history" class="container">
+
+      <!-- Education (HUST) at the top of timeline -->
+      <div class="entry row">
+        <div class="timespan">
+          2022 - 2026
+        </div>
+        <div class="ico">
+          <img src="assets/hust.webp" alt="HUST Logo" />
+        </div>
+        <div class="desc">
+          I am pursuing my Bachelor of Science in Computer Science at <a href="https://hust.edu.vn/">Hanoi University of Science and Technology (HUST / ĐH Bách Khoa Hà Nội)</a>.
+          <div style="margin-top: 4px; color: #555;">
+            GPA: 3.04 / 4.0 • Expected Graduation: September 2026 • Based in Minh Khai, Hai Ba Trung, Ha Noi.
+          </div>
+        </div>
+      </div>
 
       <!-- DNSE -->
       <div class="entry row">
@@ -293,22 +313,6 @@
             <li><a href="https://github.com/DUYCUTEPHOMAIQUE/FatCat-FlashCard-App">FatCat</a>: Flashcard vocabulary learning application (Node.js, MySQL, AWS EC2).</li>
             <li><a href="https://github.com/DUYCUTEPHOMAIQUE/backend-di-cho-tien-loi">Benri</a>: Grocery shopping and food inventory management application (Node.js, MongoDB, AWS EC2).</li>
           </ul>
-        </div>
-      </div>
-
-      <!-- HUST -->
-      <div class="entry row">
-        <div class="timespan">
-          2022 - 2026
-        </div>
-        <div class="ico">
-          <img src="assets/hust.webp" alt="HUST Logo" />
-        </div>
-        <div class="desc">
-          I am pursuing my Bachelor of Science in Computer Science at <a href="https://hust.edu.vn/">Hanoi University of Science and Technology (HUST / ĐH Bách Khoa Hà Nội)</a>.
-          <div style="margin-top: 4px; color: #555;">
-            GPA: 3.04 / 4.0 • Expected Graduation: September 2026 • Based in Minh Khai, Hai Ba Trung, Ha Noi.
-          </div>
         </div>
       </div>
 
