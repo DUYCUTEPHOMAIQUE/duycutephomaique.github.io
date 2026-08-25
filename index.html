@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Đậu Quốc Duy</title>
-    <link rel="stylesheet" type="text/css" href="style.css?v=6.0">
+    <link rel="stylesheet" type="text/css" href="style.css?v=7.0">
     <style>
       body {
           margin: 0;
@@ -117,12 +117,12 @@
           max-width: 970px;
       }
       .sec-head {
-          font-size: 19px;
+          font-size: 20px;
           font-weight: 600;
           color: #111;
-          margin: 35px 0 22px 0;
-          padding-bottom: 6px;
-          border-bottom: 1px solid #eee;
+          margin: 40px 0 24px 0;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #eaeaea;
           letter-spacing: -0.2px;
       }
       #history {
@@ -130,11 +130,10 @@
           margin-bottom: 80px;
       }
       .timeline-block {
-          margin-bottom: 40px;
+          margin-bottom: 45px;
       }
       .entry {
           margin-bottom: 34px;
-          align-items: flex-start;
       }
       .entry:last-child {
           margin-bottom: 10px;
@@ -145,7 +144,7 @@
           padding-right: 20px;
           font-size: 14px;
           color: #888;
-          padding-top: 4px;
+          padding-top: 2px;
           white-space: nowrap;
       }
       .ico {
@@ -153,18 +152,19 @@
           text-align: center;
           position: relative;
           display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          padding-top: 4px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          height: 100%;
       }
       .ico::before {
           content: "";
           position: absolute;
-          top: 14px;
-          bottom: -38px;
+          top: 8px;
+          bottom: -36px;
           left: 50%;
           width: 2px;
-          background-color: #e5e7eb;
+          background-color: #cbd5e1;
           transform: translateX(-50%);
           z-index: 1;
       }
@@ -174,12 +174,12 @@
       .entry-dot {
           width: 8px;
           height: 8px;
-          background-color: #9ca3af;
+          background-color: #64748b;
           border-radius: 50%;
           margin-top: 6px;
           position: relative;
           z-index: 2;
-          box-shadow: 0 0 0 4px #ffffff;
+          box-shadow: 0 0 0 5px #ffffff;
       }
       .ico img {
           position: relative;
@@ -189,7 +189,7 @@
           border-radius: 6px;
           object-fit: contain;
           background-color: #ffffff;
-          box-shadow: 0 0 0 4px #ffffff;
+          box-shadow: 0 0 0 5px #ffffff;
       }
       .desc {
           grid-column: span 9;
@@ -216,8 +216,8 @@
           margin-bottom: 6px;
       }
       .project-preview {
-          margin-top: 12px;
-          margin-bottom: 6px;
+          margin-top: 14px;
+          margin-bottom: 8px;
       }
       .preview-img {
           width: 100%;
@@ -246,9 +246,10 @@
           .ico {
               grid-column: span 2;
               justify-content: flex-start;
+              align-items: center;
           }
           .ico::before {
-              left: 8px;
+              left: 50%;
           }
           .desc {
               grid-column: span 10;
