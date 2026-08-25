@@ -12,8 +12,9 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 @media (min-width: 992px) {
@@ -22,43 +23,43 @@ body {
     }
 }
 
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    box-sizing: border-box;
+}
+
 /* Header */
 #dhead {
-    margin-top: 45px;
+    margin-top: 40px;
     margin-bottom: 25px;
 }
 
-#dhead .header-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-
 #dpic {
-    flex-shrink: 0;
-}
-
-.ppic {
-    border-radius: 50%;
-    width: 215px;
-    height: 215px;
-    object-fit: cover;
-    display: block;
+    grid-column: span 6;
+    text-align: right;
+    padding-right: 25px;
+    box-sizing: border-box;
 }
 
 #ddesc {
-    max-width: 580px;
+    padding-top: 25px;
+    padding-left: 20px;
+    grid-column: span 6;
+    box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    #dhead {
-        margin-top: 30px;
-    }
-    #dhead .header-row {
-        flex-direction: column;
+@media (max-width: 991px) {
+    #dpic {
+        grid-column: span 12;
         text-align: center;
-        gap: 20px;
+        padding-right: 0;
+    }
+    #ddesc {
+        grid-column: span 12;
+        padding-top: 20px;
+        padding-left: 0;
+        text-align: center;
     }
     #dico {
         justify-content: center;
@@ -66,27 +67,36 @@ body {
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 34px;
     font-weight: normal;
     padding: 0;
-    margin: 0 0 6px 0;
-    color: #111;
-    letter-spacing: -0.3px;
+    margin: 0;
+    color: #000;
 }
 
 h2 {
     font-weight: normal;
     font-style: italic;
     font-size: 18px;
-    margin: 0 0 14px 0;
-    color: #666;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    color: #555;
     line-height: 1.4;
+}
+
+.ppic {
+    border-radius: 50%;
+    width: 195px;
+    height: 195px;
+    object-fit: cover;
+    display: inline-block;
 }
 
 #dico {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .iico {
@@ -94,82 +104,77 @@ h2 {
     height: 28px;
     cursor: pointer;
     vertical-align: middle;
-    transition: opacity 0.15s ease, transform 0.15s ease;
+    transition: opacity 0.15s ease;
 }
 
 .iico:hover {
     opacity: 0.75;
-    transform: scale(1.05);
 }
 
 #demail {
     margin-top: 10px;
+    font-family: monospace;
     font-size: 14.5px;
     color: #333;
-    font-family: monospace;
     min-height: 20px;
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #eaeaea;
-    margin: 30px auto 40px auto;
+    border-top: 1px solid #ddd;
+    margin: 30px auto;
     max-width: 970px;
 }
 
-/* History / Timeline */
+/* History */
 #history {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 80px;
 }
 
 .entry {
-    display: grid;
-    grid-template-columns: 145px 35px 1fr;
-    gap: 10px;
-    margin-bottom: 34px;
-    align-items: flex-start;
+    margin-bottom: 32px;
 }
 
 .timespan {
+    grid-column: span 2;
     text-align: right;
+    padding-right: 25px;
     font-size: 14px;
-    color: #999;
+    color: #888;
     padding-top: 2px;
     white-space: nowrap;
-    letter-spacing: -0.2px;
 }
 
 .ico {
+    grid-column: span 1;
     text-align: center;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 7px;
 }
 
 .entry-dot {
+    position: absolute;
+    left: -12px;
+    top: 6px;
     width: 6px;
     height: 6px;
-    background-color: #bbb;
+    background-color: #ccc;
     border-radius: 50%;
 }
 
 .ico img {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 6px;
     object-fit: contain;
-    margin-top: 6px;
 }
 
 .desc {
+    grid-column: span 9;
     font-size: 15px;
     line-height: 1.55;
-    padding-left: 5px;
     color: #333;
+    padding-left: 5px;
 }
 
 .desc a {
@@ -191,28 +196,27 @@ hr {
 }
 
 .htxt {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-@media (max-width: 768px) {
-    .entry {
-        grid-template-columns: 25px 1fr;
-        gap: 8px;
-    }
+@media (max-width: 991px) {
     .timespan {
-        grid-column: span 2;
+        grid-column: span 12;
         text-align: left;
-        font-weight: 600;
-        color: #777;
-        margin-bottom: -2px;
-        padding-top: 0;
+        font-weight: bold;
+        color: #666;
+        margin-bottom: 4px;
+        padding-right: 0;
+    }
+    .entry-dot {
+        display: none;
     }
     .ico {
-        grid-column: 1;
-        padding-top: 6px;
+        grid-column: span 2;
+        text-align: left;
     }
     .desc {
-        grid-column: 2;
+        grid-column: span 10;
         padding-left: 0;
     }
 }
