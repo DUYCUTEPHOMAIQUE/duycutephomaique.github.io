@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Đậu Quốc Duy — Developer</title>
-<meta name="description" content="Portfolio của Đậu Quốc Duy — developer đam mê tự động hóa, backend Go và hệ thống dữ liệu.">
+<title>Đậu Quốc Duy — Backend Engineer</title>
+<meta name="description" content="Portfolio của Đậu Quốc Duy — Backend Engineer chuyên Golang, microservices, Kafka và hệ thống real-time.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -26,18 +26,12 @@
     line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
-  .serif{font-family:'Fraunces',Georgia,serif}
   .wrap{max-width:880px;margin:0 auto;padding:0 24px}
 
   /* ---------- header ---------- */
-  header{
-    border-bottom:1px solid var(--line);
-    padding:20px 0;
-  }
-  .masthead{
-    display:flex;justify-content:space-between;align-items:baseline;
-  }
-  .masthead .brand{font-weight:600;font-size:15px;letter-spacing:.02em}
+  header{border-bottom:1px solid var(--line);padding:20px 0}
+  .masthead{display:flex;justify-content:space-between;align-items:baseline}
+  .masthead .brand{font-family:'Fraunces',serif;font-weight:600;font-size:15px;letter-spacing:.02em}
   nav a{
     color:var(--muted);text-decoration:none;font-size:13px;
     margin-left:22px;letter-spacing:.06em;text-transform:uppercase;
@@ -60,21 +54,38 @@
     margin-bottom:28px;
   }
   h1 em{font-style:italic;font-weight:600}
-  .hero p.lede{
-    max-width:520px;color:var(--muted);font-size:17px;
+  .hero p.lede{max-width:560px;color:var(--muted);font-size:17px}
+  .meta-row{
+    display:flex;gap:36px;margin-top:34px;flex-wrap:wrap;
   }
+  .meta-row div span:first-child{
+    display:block;font-size:11.5px;text-transform:uppercase;
+    letter-spacing:.14em;color:var(--muted);margin-bottom:4px;
+  }
+  .meta-row div span:last-child{font-size:15px;font-weight:500}
 
   /* ---------- section frame ---------- */
   section{padding:64px 0;border-bottom:1px solid var(--line)}
-  .sec-label{
-    display:flex;align-items:center;gap:14px;margin-bottom:36px;
-  }
+  .sec-label{display:flex;align-items:center;gap:14px;margin-bottom:36px}
   .sec-label .no{font-family:'Fraunces',serif;font-style:italic;color:var(--accent)}
   .sec-label h2{
     font-family:'Fraunces',serif;font-weight:600;font-size:13px;
     text-transform:uppercase;letter-spacing:.2em;
   }
   .sec-label::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* ---------- experience ---------- */
+  .xp-item{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:26px 4px;border-top:1px solid var(--line)}
+  .xp-item:last-child{border-bottom:1px solid var(--line)}
+  .xp-date{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;line-height:1.7}
+  .xp-body h3{font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin-bottom:2px}
+  .xp-body .place{font-size:13.5px;color:var(--accent);font-style:italic;margin-bottom:12px;display:block}
+  .xp-body ul{list-style:none}
+  .xp-body li{
+    color:var(--muted);font-size:15px;padding-left:18px;position:relative;margin-bottom:8px;
+  }
+  .xp-body li::before{content:"—";position:absolute;left:0;color:var(--line)}
+  .xp-body li strong{color:var(--ink);font-weight:500}
 
   /* ---------- work list ---------- */
   .work{list-style:none}
@@ -91,25 +102,36 @@
   .work li a:hover{background:#f1efe8}
   .work .idx{font-family:'Fraunces',serif;font-style:italic;color:var(--muted);font-size:15px}
   .work .name{
-    font-family:'Fraunces',serif;font-weight:600;font-size:24px;
+    font-family:'Fraunces',serif;font-weight:600;font-size:23px;
     line-height:1.2;display:block;margin-bottom:6px;
   }
+  .work .name .ext{font-size:14px;color:var(--accent);font-style:italic;font-weight:400}
   .work .desc{color:var(--muted);font-size:14.5px}
   .work .tag{
     font-size:11.5px;text-transform:uppercase;letter-spacing:.12em;
-    color:var(--muted);white-space:nowrap;
+    color:var(--muted);white-space:nowrap;text-align:right;
   }
+  .more-link{display:inline-block;margin-top:22px;font-size:14px;color:var(--ink);
+    text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s}
+  .more-link:hover{color:var(--accent);border-color:var(--accent)}
 
   /* ---------- about / columns ---------- */
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:48px}
   .cols p{color:var(--muted);margin-bottom:14px}
   .stack{list-style:none}
   .stack li{
-    display:flex;justify-content:space-between;
+    display:flex;justify-content:space-between;gap:16px;
     padding:10px 0;border-bottom:1px dotted var(--line);
     font-size:14.5px;
   }
-  .stack li span:last-child{color:var(--muted)}
+  .stack li span:first-child{white-space:nowrap}
+  .stack li span:last-child{color:var(--muted);text-align:right}
+  .langs{display:flex;gap:28px;margin-top:26px}
+  .langs div span:first-child{
+    display:block;font-size:11.5px;text-transform:uppercase;
+    letter-spacing:.14em;color:var(--muted);margin-bottom:2px;
+  }
+  .langs div span:last-child{font-weight:500;font-size:15px}
 
   /* ---------- contact ---------- */
   .contact{text-align:left}
@@ -128,15 +150,14 @@
   }
   .links a:hover{color:var(--accent);border-color:var(--accent)}
 
-  footer{
-    padding:26px 0;color:var(--muted);font-size:12.5px;
-    display:flex;justify-content:space-between;
-  }
+  footer{padding:26px 0;color:var(--muted);font-size:12.5px}
+  footer .wrap{display:flex;justify-content:space-between}
 
   @media(max-width:640px){
     .cols{grid-template-columns:1fr}
+    .xp-item{grid-template-columns:1fr;gap:6px}
     .work li a{grid-template-columns:40px 1fr;grid-template-rows:auto auto}
-    .work .tag{grid-column:2}
+    .work .tag{grid-column:2;text-align:left}
     nav a{margin-left:14px}
   }
 </style>
@@ -145,8 +166,9 @@
 
 <header>
   <div class="wrap masthead">
-    <span class="brand serif">Đậu Quốc Duy</span>
+    <span class="brand">Đậu Quốc Duy</span>
     <nav>
+      <a href="#experience">Experience</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -158,76 +180,90 @@
   <div class="wrap">
 
     <div class="hero">
-      <p class="kicker">Portfolio — Hà Nội, Việt Nam</p>
-      <h1>Developer thích<br>biến việc thủ công<br>thành <em>hệ thống.</em></h1>
-      <p class="lede">Sinh viên CNTT (HUST) & builder. Tôi viết code để thu thập dữ liệu,
-      tự động hóa quy trình và ship sản phẩm thực dùng được — từ crawler đa nền tảng đến backend Go.</p>
+      <p class="kicker">Backend Engineer — Hà Nội, Việt Nam</p>
+      <h1>Xây hệ thống<br>microservices chạy thật,<br>không chỉ <em>demo.</em></h1>
+      <p class="lede">Kỹ sư phần mềm tại Hanoi University of Science and Technology. Tôi thiết kế API mở rộng,
+      hệ thống real-time với WebSocket, pipeline CI/CD — hiện đang xây nền tảng giao dịch chứng khoán AI tại DNSE.</p>
+      <div class="meta-row">
+        <div><span>Hiện tại</span><span>DNSE Securities · Part-time</span></div>
+        <div><span>Học vấn</span><span>HUST · CS · 2026</span></div>
+        <div><span>Trọng tâm</span><span>Golang · Kafka · K8s</span></div>
+      </div>
     </div>
 
+    <section id="experience">
+      <div class="sec-label"><span class="no">01</span><h2>Experience</h2></div>
+      <div class="xp-item">
+        <div class="xp-date">4 / 2025<br>Nay</div>
+        <div class="xp-body">
+          <h3>Software Engineer</h3>
+          <span class="place">DNSE Securities JSC — part time</span>
+          <ul>
+            <li>Xây hệ thống <strong>giao dịch chứng khoán thông minh dùng AI</strong> bằng Golang (Gin), kiến trúc microservices tích hợp qua Kafka.</li>
+            <li>Phát triển tính năng <strong>chatbot cổ phiếu real-time</strong> trên Nakama WebSocket — tương tác mượt, scale được.</li>
+            <li>Vận hành CI/CD với GitLab Runner, deploy microservices lên <strong>Kubernetes</strong> trong môi trường production.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section id="work">
-      <div class="sec-label"><span class="no">01</span><h2>Selected Work</h2></div>
+      <div class="sec-label"><span class="no">02</span><h2>Selected Work</h2></div>
       <ul class="work">
-        <li><a href="https://github.com/DUYCUTEPHOMAIQUE/painpoint-crawler">
+        <li><a href="https://walletcare.c3-app-121.io.vn">
           <span class="idx">№ 1</span>
-          <span><span class="name">Pain Point Crawler</span>
-          <span class="desc">Hệ thống crawl pain point từ Reddit, HN, StackOverflow… kèm LLM digest, dashboard và bot Telegram chạy tự động trên GitHub Actions.</span></span>
-          <span class="tag">Python · Data</span>
+          <span><span class="name">WalletCare AI <span class="ext">↗ live</span></span>
+          <span class="desc">AI Agent cho ví điện tử: tự động điều tra tranh chấp giao dịch &amp; CSKH, reasoning đa bước bằng LangGraph + FastAPI, Human-in-the-Loop chống hallucination. Full-stack với Next.js.</span></span>
+          <span class="tag">LangGraph<br>FastAPI · Next.js</span>
         </a></li>
-        <li><a href="https://knowloot.vercel.app">
+        <li><a href="https://fatcat-datn.web.app/">
           <span class="idx">№ 2</span>
-          <span><span class="name">AIRiser / KnowLoot</span>
-          <span class="desc">Sản phẩm AI hỗ trợ học tập, deploy trên Vercel với kiến trúc TypeScript hiện đại.</span></span>
-          <span class="tag">TypeScript · AI</span>
+          <span><span class="name">LangLearn AI <span class="ext">↗ live · Capstone</span></span>
+          <span class="desc">Nền tảng học ngôn ngữ thông minh: lặp lại ngắt quãng FSRS, AI speaking buddy, phân tích học tập thích ứng. RESTful API bằng Go (Gin), PostgreSQL, Redis; frontend React 19 + TypeScript.</span></span>
+          <span class="tag">Go · Redis<br>React 19</span>
         </a></li>
-        <li><a href="https://github.com/DUYCUTEPHOMAIQUE/go-backend-concurrency">
+        <li><a href="https://github.com/DUYCUTEPHOMAIQUE/backend-di-cho-tien-loi">
           <span class="idx">№ 3</span>
-          <span><span class="name">Go Backend Concurrency</span>
-          <span class="desc">Thực hành concurrency pattern trong Go: worker pool, context, channel — tối ưu thông lượng xử lý.</span></span>
-          <span class="tag">Go · Backend</span>
-        </a></li>
-        <li><a href="https://github.com/DUYCUTEPHOMAIQUE/go-kafka-mq">
-          <span class="idx">№ 4</span>
-          <span><span class="name">Go Kafka MQ</span>
-          <span class="desc">Message queue với Kafka trong Go: producer/consumer, retry, dead-letter handling.</span></span>
-          <span class="tag">Go · Kafka</span>
+          <span><span class="name">Benri — Convenient Shopping</span>
+          <span class="desc">App hỗ trợ lập kế hoạch mua sắm &amp; quản lý kho thực phẩm. Backend Node.js + MongoDB, thiết kế database, deploy production trên AWS EC2. Team 4 người.</span></span>
+          <span class="tag">Node.js<br>MongoDB · AWS</span>
         </a></li>
         <li><a href="https://github.com/DUYCUTEPHOMAIQUE/FatCat-FlashCard-App">
-          <span class="idx">№ 5</span>
-          <span><span class="name">FatCat FlashCard</span>
-          <span class="desc">Ứng dụng flashcard học tập viết bằng Flutter, giao diện mượt, lưu tiến độ cục bộ.</span></span>
-          <span class="tag">Flutter · Mobile</span>
-        </a></li>
-        <li><a href="https://github.com/DUYCUTEPHOMAIQUE/Enva">
-          <span class="idx">№ 6</span>
-          <span><span class="name">Enva</span>
-          <span class="desc">Dự án C++ — bài toán kỹ thuật hiệu năng cao.</span></span>
-          <span class="tag">C++</span>
+          <span class="idx">№ 4</span>
+          <span><span class="name">FatCat — Flash Card App</span>
+          <span class="desc">Ứng dụng tăng khả năng ghi nhớ từ vựng qua flashcard tương tác. Backend Node.js + MySQL, deploy AWS EC2. Team 5 người.</span></span>
+          <span class="tag">Node.js<br>MySQL · AWS</span>
         </a></li>
       </ul>
+      <a class="more-link" href="https://github.com/DUYCUTEPHOMAIQUE">Thêm nữa trên GitHub →</a>
     </section>
 
     <section id="about">
-      <div class="sec-label"><span class="no">02</span><h2>About & Stack</h2></div>
+      <div class="sec-label"><span class="no">03</span><h2>About &amp; Stack</h2></div>
       <div class="cols">
         <div>
-          <p>Tôi là <strong>Đậu Quốc Duy</strong> — sinh viên Công nghệ Thông tin tại Đại học Bách khoa Hà Nội (HUST).</p>
-          <p>Điều khiến tôi ngồi vào bàn phím mỗi ngày là cảm giác thay thế công việc lặp lại bằng tự động hóa: một script chạy đúng lúc 7 giờ sáng đáng giá hơn hàng giờ làm tay.</p>
-          <p>Ngoài code, tôi quan tâm dữ liệu sạch, hệ thống đơn giản và những báo cáo ngắn gọn.</p>
+          <p>Tôi là <strong>Đậu Quốc Duy</strong>, sinh viên Khoa học Máy tính tại Đại học Bách khoa Hà Nội, dự kiến tốt nghiệp 9/2026.</p>
+          <p>Kinh nghiệm thực chiến ở DNSE khiến tôi tin rằng hệ thống tốt sinh ra từ những lựa chọn đơn giản: service nhỏ rõ ràng, message queue đáng tin, deployment tự động.</p>
+          <p>Tôi dùng AI coding assistants (Claude Code, Cursor) hàng ngày để tăng tốc phát triển — và viết tool tự động hóa riêng khi thấy việc nào lặp lại quá 2 lần.</p>
         </div>
         <ul class="stack">
-          <li><span>Backend</span><span>Go · Python · Node.js</span></li>
-          <li><span>Frontend</span><span>TypeScript · React · Next.js</span></li>
-          <li><span>Data</span><span>SQLite · PostgreSQL · Supabase</span></li>
-          <li><span>Mobile</span><span>Flutter</span></li>
-          <li><span>DevOps</span><span>GitHub Actions · Docker · Vercel</span></li>
-          <li><span>Messaging</span><span>Kafka · Telegram Bot API</span></li>
+          <li><span>Back-end</span><span>Golang · Node.js · Java</span></li>
+          <li><span>Data</span><span>PostgreSQL · MySQL · MongoDB · Redis</span></li>
+          <li><span>Messaging</span><span>Kafka · WebSocket (Nakama)</span></li>
+          <li><span>Front-end</span><span>React · Next.js · Flutter (MVVM)</span></li>
+          <li><span>DevOps</span><span>Docker · Kubernetes · GitLab CI/CD · AWS</span></li>
+          <li><span>Công cụ AI</span><span>Claude Code · Cursor · Prompt Engineering</span></li>
         </ul>
+      </div>
+      <div class="langs">
+        <div><span>Tiếng Anh</span><span>VSTEP B1 ≈ TOEIC 550</span></div>
+        <div><span>Tiếng Nhật</span><span>JLPT N4</span></div>
       </div>
     </section>
 
     <section id="contact" class="contact" style="border-bottom:none">
-      <div class="sec-label"><span class="no">03</span><h2>Contact</h2></div>
-      <p class="big">Bạn có ý tưởng cần hiện thực hóa,<br>hay chỉ muốn trò chuyện về <em>tự động hóa?</em></p>
+      <div class="sec-label"><span class="no">04</span><h2>Contact</h2></div>
+      <p class="big">Cần một kỹ sư biết biến bài toán thành<br><em>hệ thống chạy thật?</em></p>
       <div class="links">
         <a href="mailto:duy24.it.hust@gmail.com">Email</a>
         <a href="https://github.com/DUYCUTEPHOMAIQUE">GitHub</a>
@@ -239,7 +275,7 @@
 </main>
 
 <footer>
-  <div class="wrap" style="display:flex;justify-content:space-between;width:100%">
+  <div class="wrap">
     <span>© 2026 Đậu Quốc Duy</span>
     <span>Hà Nội · GMT+7</span>
   </div>
