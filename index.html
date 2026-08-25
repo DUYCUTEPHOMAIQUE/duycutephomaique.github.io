@@ -1,307 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Portfolio of Dau Quoc Duy (Đậu Quốc Duy) - Backend & AI Software Engineer. Golang, Kafka, Kubernetes, Microservices, AI Agents.">
-  <meta name="author" content="Đậu Quốc Duy">
-  <title>Đậu Quốc Duy | Software Engineer</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" href="assets/github.svg" type="image/svg+xml">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Đậu Quốc Duy</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
 
-  <!-- HEADER -->
-  <header id="dhead" class="container">
-    <div class="row">
-      <div id="dpic">
-        <img 
-          src="https://github.com/duy24ithust.png" 
-          onerror="this.onerror=null; this.src='https://github.com/DUYCUTEPHOMAIQUE.png';" 
-          alt="Đậu Quốc Duy (Dau Quoc Duy)" 
-          class="ppic"
-        >
-      </div>
-      <div id="ddesc">
-        <h1>Đậu Quốc Duy</h1>
-        <h2>Backend Engineer • Distributed Systems & AI Agent Applications ⚡🤖</h2>
-        
-        <div class="sub-meta">
-          <span class="sub-meta-item">
-            <img src="assets/location.svg" alt="Location"> Minh Khai, Hai Ba Trung, Ha Noi
-          </span>
-          <span class="sub-meta-item">
-            🎓 HUST (Expected 9/2026)
-          </span>
+    <!-- Header Section -->
+    <div id="dhead" class="container">
+      <div class="row">
+        <div id="dpic">
+          <img src="https://github.com/duy24ithust.png" onerror="this.onerror=null; this.src='https://github.com/DUYCUTEPHOMAIQUE.png';" class="ppic" />
         </div>
-
-        <div id="dico">
-          <a href="https://github.com/DUYCUTEPHOMAIQUE" target="_blank" rel="noopener noreferrer" class="iico-btn" title="GitHub Profile">
-            <img src="assets/github.svg" alt="GitHub"> GitHub
-          </a>
-          <a href="https://github.com/duy24ithust" target="_blank" rel="noopener noreferrer" class="iico-btn" title="GitHub Secondary">
-            <img src="assets/github.svg" alt="GitHub"> duy24ithust
-          </a>
-          <a href="https://www.linkedin.com/in/dau-quoc-duy" target="_blank" rel="noopener noreferrer" class="iico-btn" title="LinkedIn Profile">
-            <img src="assets/linkedin.svg" alt="LinkedIn"> LinkedIn
-          </a>
-          <button id="btn-email" class="iico-btn" title="Click to reveal email">
-            <img src="assets/email.svg" alt="Email"> Email
-          </button>
-          <button id="btn-phone" class="iico-btn" title="Click to reveal phone">
-            <img src="assets/phone.svg" alt="Phone"> Phone
-          </button>
-        </div>
-        <div id="contact-reveal-container" style="display: none; margin-top: 10px;">
-          <div id="contact-reveal-box"></div>
+        <div id="ddesc">
+          <h1>Đậu Quốc Duy</h1>
+          <h2>I like to build scalable backend systems, real-time services and AI agent applications ⚡🤖</h2>
+          <div id="dico">
+            <a href="https://github.com/DUYCUTEPHOMAIQUE"><img src="assets/github.svg" class="iico" title="GitHub" /></a>
+            <a href="https://www.linkedin.com/in/dau-quoc-duy"><img src="assets/linkedin.svg" class="iico" title="LinkedIn" /></a>
+            <img src="assets/email.svg" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal email" />
+            <img src="assets/phone.svg" style="cursor: pointer;" class="iico" id="iphone" title="click to reveal phone" />
+          </div>
+          <div id="demail"></div> <!-- will reveal contact info -->
         </div>
       </div>
     </div>
-  </header>
 
-  <hr>
+    <hr>
 
-  <div class="container">
-    <!-- ABOUT ME -->
-    <section>
-      <div class="section-title">About Me</div>
-      <p class="about-text">
-        Backend Engineer with hands-on experience building microservice systems using <strong>Golang</strong>, <strong>Kafka</strong>, <strong>Kubernetes</strong>, and <strong>GitLab CI/CD</strong>. Experienced in designing scalable APIs, real-time applications with <strong>WebSocket</strong>, and deploying production services on <strong>AWS</strong>. Familiar with <strong>Flutter</strong> and <strong>React</strong> for full-stack collaboration, and actively leverage modern AI coding assistants (Claude Code, Cursor AI) and LLM agent frameworks to accelerate software engineering productivity.
-      </p>
-    </section>
+    <!-- History / Timeline Section -->
+    <div id="history" class="container">
 
-    <!-- EXPERIENCE -->
-    <section class="timeline-section">
-      <div class="section-title">Work Experience</div>
-
-      <!-- Experience 1: DNSE -->
       <div class="entry row">
         <div class="timespan">
-          4/2025 - Present
+          2025 -
         </div>
         <div class="ico">
-          <div class="entry-dot"></div>
+          <img src="assets/dnse.svg" alt="DNSE Logo" />
         </div>
         <div class="desc">
-          <h3>Software Engineer (Part-time) <span class="meta-tag">DNSE Securities JSC</span></h3>
+          I am a Software Engineer (Part-time) at <a href="https://www.dnse.com.vn/">DNSE Securities JSC</a>.
           <ul>
-            <li>Built an AI-powered smart stock trading system using <strong>Golang (Gin Framework)</strong> within a microservices architecture integrated asynchronously via <strong>Apache Kafka</strong>.</li>
-            <li>Designed and implemented real-time stock chatbot features leveraging <strong>Nakama WebSocket</strong> for interactive and scalable high-concurrency communication.</li>
-            <li>Managed automated CI/CD pipelines with <strong>GitLab Runner</strong> and deployed microservices on <strong>Kubernetes</strong>, ensuring reliable zero-downtime delivery processes.</li>
+            <li>Built an AI-powered smart stock trading system using Golang (Gin Framework) within a microservices architecture integrated via Kafka.</li>
+            <li>Designed and implemented real-time stock chatbot features leveraging Nakama WebSocket for interactive and scalable communication.</li>
+            <li>Managed CI/CD pipelines with GitLab Runner and deployed microservices on Kubernetes, ensuring reliable and automated delivery processes.</li>
           </ul>
         </div>
       </div>
-    </section>
 
-    <!-- FEATURED PROJECTS -->
-    <section class="timeline-section">
-      <div class="section-title">Featured Projects</div>
-
-      <!-- Project 1: WalletCare AI -->
       <div class="entry row">
         <div class="timespan">
-          7/2026 - 8/2026
+          2026
         </div>
         <div class="ico">
-          <div class="entry-dot"></div>
+          <img src="assets/walletcare.svg" alt="WalletCare Logo" />
         </div>
         <div class="desc">
-          <h3>WalletCare AI — E-Wallet Customer Support & Dispute Investigation <span class="meta-tag">3 members</span></h3>
-          <p style="margin: 4px 0 8px 0; color: #444;">
-            An AI Agent platform for e-wallet enterprises to automate transaction dispute investigation and customer support, integrated and demonstrated with a simulated e-wallet (VPay).
-          </p>
+          I built <a href="https://walletcare.c3-app-121.io.vn">WalletCare AI</a> (<a href="https://github.com/AI20K-Build-Phase-Cohort-3/P-121">GitHub</a>) — an AI Agent platform for e-wallet enterprises to automate transaction dispute investigation and customer support, integrated and demonstrated with a simulated e-wallet (<a href="https://vpay.c3-app-121.io.vn/app">VPay</a>).
           <ul>
-            <li><strong>Role:</strong> Full-Stack & AI Engineer.</li>
-            <li>Developed multi-step reasoning agent workflows using <strong>LangGraph</strong> and <strong>FastAPI</strong> with PostgreSQL database.</li>
-            <li>Implemented <strong>Human-in-the-Loop</strong> approval mechanisms and structured tool calling for zero-hallucination dispute investigations.</li>
-            <li>Built responsive modern web interface using <strong>Next.js</strong> and <strong>Tailwind CSS</strong>; containerized and deployed services with <strong>Docker</strong> on VPS.</li>
+            <li>Developed multi-step reasoning agent workflows using LangGraph and FastAPI with PostgreSQL database.</li>
+            <li>Implemented Human-in-the-Loop approval and tool calling for zero-hallucination investigation.</li>
+            <li>Built the web interface using Next.js and Tailwind CSS; containerized and deployed services using Docker on VPS.</li>
           </ul>
-          <div class="project-links">
-            <a href="https://github.com/AI20K-Build-Phase-Cohort-3/P-121" target="_blank" rel="noopener noreferrer" class="tag-badge">
-              <img src="assets/github.svg" width="12" height="12" alt="GitHub"> GitHub Repository
-            </a>
-            <a href="https://walletcare.c3-app-121.io.vn" target="_blank" rel="noopener noreferrer" class="tag-badge">
-              🌐 WalletCare Live Demo
-            </a>
-            <a href="https://vpay.c3-app-121.io.vn/app" target="_blank" rel="noopener noreferrer" class="tag-badge">
-              📱 VPay Simulated App
-            </a>
-          </div>
         </div>
       </div>
 
-      <!-- Project 2: LangLearn AI -->
       <div class="entry row">
         <div class="timespan">
-          1/2026 - 5/2026
+          2026
         </div>
         <div class="ico">
-          <div class="entry-dot"></div>
+          <img src="assets/fatcat.svg" alt="LangLearn Logo" />
         </div>
         <div class="desc">
-          <h3>LangLearn AI — Graduation Capstone Project <span class="meta-tag">Solo (1 member)</span></h3>
-          <p style="margin: 4px 0 8px 0; color: #444;">
-            A comprehensive graduation capstone project developing an intelligent language learning platform with FSRS spaced repetition, AI speaking buddy, and adaptive learning analytics.
-          </p>
+          For my graduation capstone project, I developed <a href="https://fatcat-datn.web.app/">LangLearn AI</a> — an intelligent language learning platform with FSRS spaced repetition, AI speaking buddy, and adaptive learning analytics.
           <ul>
-            <li><strong>Role:</strong> Full-Stack & AI Engineer.</li>
-            <li>Developed high-performance RESTful APIs using <strong>Go (Gin)</strong>, <strong>PostgreSQL</strong>, and <strong>Redis</strong> caching.</li>
-            <li>Implemented the state-of-the-art <strong>FSRS (Free Spaced Repetition Scheduler)</strong> algorithm and LLM integration for interactive AI speaking practice and smart flashcard generation.</li>
-            <li>Built reactive UI with <strong>React 19</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>; containerized and deployed with <strong>Docker</strong>.</li>
+            <li>Developed RESTful APIs using Go (Gin), PostgreSQL, and Redis.</li>
+            <li>Implemented FSRS algorithm and LLM integration for AI speaking buddy and smart flashcards.</li>
+            <li>Built web interface with React 19, TypeScript, and Tailwind CSS; containerized and deployed using Docker.</li>
           </ul>
-          <div class="project-links">
-            <a href="https://fatcat-datn.web.app/" target="_blank" rel="noopener noreferrer" class="tag-badge">
-              🌐 Live Website (fatcat-datn.web.app)
-            </a>
-          </div>
         </div>
       </div>
 
-      <!-- Project 3: FatCat -->
       <div class="entry row">
         <div class="timespan">
-          9/2024 - 12/2024
+          2024
         </div>
         <div class="ico">
-          <div class="entry-dot"></div>
+          <img src="assets/fatcat.svg" alt="FatCat Logo" />
         </div>
         <div class="desc">
-          <h3>FatCat — Flash Card Application <span class="meta-tag">5 members</span></h3>
-          <p style="margin: 4px 0 8px 0; color: #444;">
-            An interactive application designed to enhance users' vocabulary retention through spaced flashcard learning methods.
-          </p>
-          <ul>
-            <li><strong>Role:</strong> Back-End Developer.</li>
-            <li>Designed normalized relational database schemas with <strong>MySQL</strong> and built backend services with <strong>Node.js</strong>.</li>
-            <li>Configured and deployed production environments using <strong>AWS EC2</strong>.</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/DUYCUTEPHOMAIQUE/FatCat-FlashCard-App" target="_blank" rel="noopener noreferrer" class="tag-badge">
-              <img src="assets/github.svg" width="12" height="12" alt="GitHub"> GitHub Repository
-            </a>
-          </div>
+          I built the backend for <a href="https://github.com/DUYCUTEPHOMAIQUE/FatCat-FlashCard-App">FatCat - Flash Card Application</a>, an effective application to enhance users' vocabulary retention through interactive and engaging flashcard methods. Developed with Node.js and MySQL, and deployed to AWS EC2.
         </div>
       </div>
 
-      <!-- Project 4: Benri -->
       <div class="entry row">
         <div class="timespan">
-          9/2024 - 12/2024
+          2024
         </div>
         <div class="ico">
-          <div class="entry-dot"></div>
+          <img src="assets/benri.svg" alt="Benri Logo" />
         </div>
         <div class="desc">
-          <h3>Benri — Convenient Shopping & Inventory Management <span class="meta-tag">4 members</span></h3>
-          <p style="margin: 4px 0 8px 0; color: #444;">
-            An application designed to assist households and individuals in scheduling grocery shopping and managing food inventory effectively.
-          </p>
-          <ul>
-            <li><strong>Role:</strong> Back-End Developer.</li>
-            <li>Engineered backend API architecture using <strong>Node.js</strong> and <strong>MongoDB</strong> document database.</li>
-            <li>Deployed and maintained cloud server environments on <strong>AWS EC2</strong>.</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/DUYCUTEPHOMAIQUE/backend-di-cho-tien-loi" target="_blank" rel="noopener noreferrer" class="tag-badge">
-              <img src="assets/github.svg" width="12" height="12" alt="GitHub"> GitHub Repository
-            </a>
-          </div>
+          I developed the backend for <a href="https://github.com/DUYCUTEPHOMAIQUE/backend-di-cho-tien-loi">Benri - Convenient Shopping</a>, an app designed to assist users in scheduling and managing their food inventory effectively. Developed with Node.js and MongoDB, and deployed to AWS EC2.
         </div>
       </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="timeline-section">
-      <div class="section-title">Education</div>
 
       <div class="entry row">
         <div class="timespan">
           2022 - 2026
         </div>
         <div class="ico">
-          <div class="entry-dot"></div>
+          <img src="assets/hust.svg" alt="HUST Logo" />
         </div>
         <div class="desc">
-          <h3>Hanoi University of Science and Technology (HUST)</h3>
-          <div class="role-company">Bachelor of Science in Computer Science</div>
+          I am pursuing my Bachelor of Science in Computer Science at <a href="https://hust.edu.vn/">Hanoi University of Science and Technology (HUST)</a>.
           <div style="margin-top: 4px; color: #555;">
-            • Cumulative GPA: <strong>3.04 / 4.0</strong><br>
-            • Expected Graduation: <strong>09/2026</strong>
+            GPA: 3.04/4.0 • Expected Graduation: September 2026 • Based in Minh Khai, Hai Ba Trung, Ha Noi.
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- TECHNICAL SKILLS -->
-    <section>
-      <div class="section-title">Technical Skills</div>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <div class="skill-title">⚙️ Back-End & Architecture</div>
-          <div class="skill-items">Golang (Gin), Node.js, Java, Microservices Architecture, RESTful APIs, WebSocket, Kafka, Nakama</div>
+      <div class="entry row">
+        <div class="timespan">
+          Skills
         </div>
-
-        <div class="skill-category">
-          <div class="skill-title">🗄️ Databases & Caching</div>
-          <div class="skill-items">PostgreSQL, MySQL, MongoDB, Redis</div>
+        <div class="ico">
         </div>
-
-        <div class="skill-category">
-          <div class="skill-title">💻 Front-End & Mobile</div>
-          <div class="skill-items">Flutter (MVVM architecture), React 19, Next.js, TypeScript, Tailwind CSS, HTML5/CSS3</div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-title">☁️ DevOps & Cloud</div>
-          <div class="skill-items">Docker, Kubernetes, GitLab CI/CD, GitLab Runner, AWS EC2, Git, GitHub</div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-title">🤖 AI Engineering & Tools</div>
-          <div class="skill-items">LangGraph, LLM Integration, Prompt Engineering, Claude Code, Cursor AI</div>
+        <div class="desc">
+          <div class="htxt">
+            A quick summary of technical tools and technologies I work with:
+          </div>
+          <ul>
+            <li><strong>Back-End:</strong> Golang, Node.js, Java, MicroServices, Apache Kafka, WebSocket, Nakama, RESTful APIs, Redis.</li>
+            <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB.</li>
+            <li><strong>Front-End:</strong> Flutter (MVVM architecture), React 19, Next.js, TypeScript, Tailwind CSS.</li>
+            <li><strong>DevOps / CI-CD:</strong> GitLab CI/CD, GitLab Runner, Docker, Kubernetes, AWS EC2, Git.</li>
+            <li><strong>AI Engineering:</strong> LangGraph, LLM integration, Prompt Engineering, Claude Code, Cursor AI.</li>
+            <li><strong>Languages:</strong> English (VSTEP B1 ~ TOEIC 550), Japanese (JLPT N4).</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <!-- LANGUAGES -->
-    <section>
-      <div class="section-title">Languages & Certifications</div>
-      <div class="lang-grid">
-        <div class="lang-item">
-          🇬🇧 <strong>English:</strong> VSTEP B1 (~ TOEIC 550)
-        </div>
-        <div class="lang-item">
-          🇯🇵 <strong>Japanese:</strong> JLPT N4
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      &copy; 2026 Đậu Quốc Duy • Built with pure HTML & CSS • Inspired by <a href="https://karpathy.ai/" target="_blank" rel="noopener noreferrer">karpathy.ai</a>
     </div>
-  </footer>
 
-  <!-- SCRIPT FOR ANTI-SPAM EMAIL & PHONE REVEAL -->
-  <script>
-    const emailUser = 'duy24.it.hust';
-    const emailDomain = 'gmail.com';
-    const phoneNum = '0363459890';
-    const container = document.getElementById('contact-reveal-container');
-    const box = document.getElementById('contact-reveal-box');
-
-    document.getElementById('btn-email')?.addEventListener('click', function() {
-      const fullEmail = emailUser + '@' + emailDomain;
-      container.style.display = 'block';
-      box.innerHTML = `✉️ Email: <a href="mailto:${fullEmail}"><strong>${fullEmail}</strong></a> <span style="font-size: 12px; color: #666; margin-left: 8px;">(Click to send email)</span>`;
-    });
-
-    document.getElementById('btn-phone')?.addEventListener('click', function() {
-      container.style.display = 'block';
-      box.innerHTML = `📞 Phone: <a href="tel:${phoneNum}"><strong>${phoneNum}</strong></a> <span style="font-size: 12px; color: #666; margin-left: 8px;">(Click to call)</span>`;
-    });
-  </script>
-</body>
+    <script>
+      document.getElementById('iemail').onclick = function() {
+        var email = 'duy24.it.hust' + '@' + 'gmail.com';
+        document.getElementById('demail').innerHTML = 'Email: <a href="mailto:' + email + '">' + email + '</a>';
+      };
+      document.getElementById('iphone').onclick = function() {
+        var phone = '0363459890';
+        document.getElementById('demail').innerHTML = 'Phone: <a href="tel:' + phone + '">' + phone + '</a>';
+      };
+    </script>
+  </body>
 </html>

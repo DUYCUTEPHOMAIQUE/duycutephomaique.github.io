@@ -1,402 +1,166 @@
-/* ==========================================================================
-   Karpathy-inspired Minimalist Portfolio Style
-   Author: Dau Quoc Duy (duycutephomaique)
-   ========================================================================== */
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333333;
-  -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
 }
 
-a {
-  color: #0066cc;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.15s ease;
+/* Layout */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
-a:hover {
-  color: #004085;
+/* Props */
+#dhead {
+    margin-top: 20px;
+}
+#dpic {
+    grid-column: span 6;
+    text-align: right;
+}
+#ddesc {
+    padding-top: 40px;
+    padding-left: 20px;
+    grid-column: span 6;
+}
+@media (max-width: 991px) {
+    #dpic {
+        grid-column: span 12;
+        text-align: center;
+    }
+    #ddesc {
+        grid-column: span 12;
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+h1 {
+    font-size: 34px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    color: #444;
+}
+.ppic {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+#dico {
+    margin-top: 10px;
+}
+.iico {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.15s;
+}
+.iico:hover {
+    opacity: 1;
+}
+#demail {
+    margin-top: 8px;
+    font-size: 15px;
+    color: #333;
+    font-family: monospace;
 }
 
 hr {
-  border: 0;
-  border-top: 1px solid #eaeaea;
-  margin: 28px auto;
-  max-width: 970px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 30px 0;
 }
 
-/* --- CONTAINER & GRID SYSTEM --- */
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  max-width: 100%;
+/* History / Timeline */
+#history {
+    margin-top: 15px;
+    margin-bottom: 60px;
 }
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 20px;
-  row-gap: 16px;
-}
-
-/* --- HEADER SECTION --- */
-#dhead {
-  margin-top: 45px;
-  margin-bottom: 25px;
-}
-
-#dpic {
-  grid-column: span 5;
-  text-align: right;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.ppic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #f0f0f0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-#ddesc {
-  grid-column: span 7;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10px;
-}
-
-h1 {
-  font-size: 32px;
-  font-weight: 600;
-  color: #111111;
-  margin: 0 0 6px 0;
-  letter-spacing: -0.5px;
-}
-
-h2 {
-  font-size: 16.5px;
-  font-weight: 400;
-  font-style: italic;
-  color: #555555;
-  margin: 0 0 14px 0;
-  line-height: 1.4;
-}
-
-.sub-meta {
-  font-size: 14px;
-  color: #666666;
-  margin-bottom: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
-}
-
-.sub-meta-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.sub-meta-item img {
-  width: 14px;
-  height: 14px;
-  opacity: 0.7;
-}
-
-#dico {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.iico-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13.5px;
-  color: #444444;
-  text-decoration: none;
-  background-color: #f7f7f8;
-  border: 1px solid #e2e2e5;
-  padding: 5px 10px;
-  border-radius: 6px;
-  transition: all 0.15s ease;
-  cursor: pointer;
-}
-
-.iico-btn:hover {
-  background-color: #ededf0;
-  color: #111111;
-  border-color: #d0d0d5;
-  text-decoration: none;
-}
-
-.iico-btn img {
-  width: 16px;
-  height: 16px;
-}
-
-#contact-reveal-box {
-  margin-top: 10px;
-  font-size: 13.5px;
-  color: #0066cc;
-  background: #f0f7ff;
-  border: 1px dashed #b8daff;
-  padding: 6px 12px;
-  border-radius: 6px;
-  display: inline-block;
-  width: fit-content;
-}
-
-/* --- SECTION HEADINGS --- */
-.section-title {
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: #222222;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-/* --- ABOUT ME --- */
-.about-text {
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: #3b3b3b;
-  margin-bottom: 25px;
-}
-
-/* --- TIMELINE ENTRIES --- */
-.timeline-section {
-  margin-bottom: 35px;
-}
-
 .entry {
-  margin-bottom: 28px;
-  align-items: flex-start;
+    margin-bottom: 25px;
 }
-
 .timespan {
-  grid-column: span 2;
-  font-size: 14.5px;
-  font-weight: 600;
-  color: #555555;
-  text-align: right;
-  padding-top: 2px;
-  letter-spacing: -0.2px;
+    grid-column: span 2;
+    text-align: right;
+    padding-right: 25px;
+    font-size: 15px;
+    color: #666;
+    padding-top: 2px;
 }
-
 .ico {
-  grid-column: span 1;
-  text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    grid-column: span 1;
+    text-align: center;
+    padding-top: 2px;
 }
-
-.entry-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #0066cc;
-  border-radius: 50%;
-  margin-top: 6px;
-  box-shadow: 0 0 0 3px #e6f0fa;
+.ico img {
+    width: 38px;
+    height: 38px;
+    border-radius: 4px;
+    object-fit: contain;
 }
-
 .desc {
-  grid-column: span 9;
-  font-size: 15px;
-  line-height: 1.55;
+    grid-column: span 9;
+    font-size: 15px;
+    line-height: 1.5;
 }
-
-.desc h3 {
-  font-size: 16.5px;
-  font-weight: 600;
-  color: #111111;
-  margin: 0 0 4px 0;
-}
-
-.desc .role-company {
-  font-weight: 500;
-  color: #222222;
-}
-
-.desc .meta-tag {
-  display: inline-block;
-  font-size: 12px;
-  background-color: #f1f3f5;
-  color: #495057;
-  padding: 2px 7px;
-  border-radius: 4px;
-  margin-left: 6px;
-  font-weight: 500;
-}
-
-.desc ul {
-  margin: 8px 0 10px 18px;
-  padding: 0;
-}
-
-.desc li {
-  margin-bottom: 5px;
-  color: #3a3a3a;
-}
-
-.project-links {
-  margin-top: 8px;
-  font-size: 13.5px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.tag-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12.5px;
-  color: #0066cc;
-  background-color: #eef6ff;
-  border: 1px solid #d0e4ff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.tag-badge:hover {
-  background-color: #dceaff;
-  text-decoration: none;
-}
-
-/* --- SKILLS & LANGUAGES --- */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin-bottom: 25px;
-}
-
-.skill-category {
-  background-color: #fafafa;
-  border: 1px solid #eeeeee;
-  border-radius: 8px;
-  padding: 14px 16px;
-}
-
-.skill-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: #222222;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.skill-items {
-  font-size: 14px;
-  color: #444444;
-  line-height: 1.5;
-}
-
-.lang-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  font-size: 14.5px;
-  margin-bottom: 20px;
-}
-
-.lang-item {
-  background: #f8f9fa;
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: 1px solid #e9ecef;
-}
-
-/* --- FOOTER --- */
-footer {
-  margin-top: 50px;
-  margin-bottom: 40px;
-  font-size: 13.5px;
-  color: #777777;
-  text-align: center;
-  border-top: 1px solid #f0f0f0;
-  padding-top: 20px;
-}
-
-/* --- RESPONSIVE MOBILE (<= 991px) --- */
-@media (max-width: 991px) {
-  #dhead {
-    margin-top: 25px;
-  }
-
-  #dpic {
-    grid-column: span 12;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  #ddesc {
-    grid-column: span 12;
-    padding-left: 0;
-    text-align: center;
-    align-items: center;
-  }
-
-  .sub-meta {
-    justify-content: center;
-  }
-
-  #dico {
-    justify-content: center;
-  }
-
-  .timespan {
-    grid-column: span 12;
-    text-align: left;
-    font-weight: 700;
+.desc a {
     color: #0066cc;
-    font-size: 14px;
-    margin-bottom: -8px;
-  }
+    text-decoration: underline;
+}
+.desc a:hover {
+    color: #004499;
+}
+.desc ol, .desc ul {
+    margin: 8px 0 10px 20px;
+    padding: 0;
+}
+.desc li {
+    margin-bottom: 5px;
+}
+.htxt {
+    margin-bottom: 8px;
+}
 
-  .ico {
-    display: none;
-  }
-
-  .desc {
-    grid-column: span 12;
-  }
+@media (max-width: 991px) {
+    .timespan {
+        grid-column: span 12;
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 4px;
+        padding-right: 0;
+    }
+    .ico {
+        grid-column: span 2;
+        text-align: left;
+    }
+    .desc {
+        grid-column: span 10;
+    }
 }

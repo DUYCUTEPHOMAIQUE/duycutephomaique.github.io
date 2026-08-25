@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect width="100" height="100" rx="20" fill="#E60012"/>
+  <path d="M50 15 L78 35 L78 70 L50 85 L22 70 L22 35 Z" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <text x="50" y="56" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">HUST</text>
+</svg>
